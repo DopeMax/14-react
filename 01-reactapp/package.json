@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "roadhog": "^2.4.5"
+  },
+  "scripts": {
+    "server": "cd server && json-server db.json -w -p 3000",
+    "dev": "roadhog server"
+  }
+}
