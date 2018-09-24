@@ -44,7 +44,7 @@ export default class NavLeft extends React.Component {
               
               defaultOpenKeys={['sub1']}
               
-              mode="inline"
+            //   mode="inline"
             >
               {this.state.menuTreeNode}
             </Menu>
