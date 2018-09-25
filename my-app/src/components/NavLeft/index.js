@@ -41,9 +41,7 @@ export default class NavLeft extends React.Component {
             <Menu
               theme="light"
               onClick={this.handleClick}
-              
               defaultOpenKeys={['sub1']}
-              
             //   mode="inline"
             >
               {this.state.menuTreeNode}
