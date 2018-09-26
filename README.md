@@ -16,7 +16,7 @@ yarn start
 
 yarn eject //注意不可逆
 yarn add antd
-yarn add less@^2.7.3  babel-plugin-import --dev
+yarn add less@^2.7.3  babel-plugin-import jsonp --dev
 
 ```
 ## webpak配置
