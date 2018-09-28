@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card  } from 'antd';
+import { Card, /* Button */ } from 'antd';
 import { connect } from 'dva';
 
 const namespace = 'puzzlecards';
@@ -12,19 +12,20 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-    return {
-      onDidMount: () => {
-        dispatch({
-          type: `${namespace}/queryInitCards`,
-        });
-      },
-    };
+  return {
+    onDidMount: () => {
+      dispatch({
+        type: `${namespace}/queryInitCards`,
+      });
+    },
   };
-@connect(mapStateToProps,mapDispatchToProps)
+};
+
+@connect(mapStateToProps, mapDispatchToProps)
 export default class PuzzleCardsPage extends Component {
-    componentDidMount() {
-        this.props.onDidMount();
-      }
+  componentDidMount() {
+    this.props.onDidMount();
+  }
   render() {
     return (
       <div>
@@ -40,7 +41,6 @@ export default class PuzzleCardsPage extends Component {
             );
           })
         }
-       
       </div>
     );
   }

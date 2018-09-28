@@ -11,7 +11,7 @@ export default {
           path: '/',
           component: './layout',
           routes: [
-            { path: 'puzzlecards', component: './puzzlecards' },
+            
             {
                 path: '/helloworld',
                 component: 'HelloWorld',
@@ -22,8 +22,16 @@ export default {
                     {path:'/dashboard/monitor', component:'./Dashboard/Monitor'},
                     {path:'/dashboard/workplace', component:'./Dashboard/Workplace'}
                 ]
-            }
+            },
+            { path: 'puzzlecards', component: './puzzlecards' },
+            { path: 'list', component: './list' }
          ]          
         }
       ],
+      proxy: {
+          '/dev': {
+            target: 'https://08ad1pao69.execute-api.us-east-1.amazonaws.com',
+            changeOrigin: true,
+          },
+        },
 };
