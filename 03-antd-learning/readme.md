@@ -13,7 +13,7 @@ create-react-app my-app
 cd my-app
 npm start
 
-yarn add react-router-dom axios less-loader
+yarn add react-router-dom axios less less-loader
 yarn remove react-router-dom
 yarn start
 
@@ -69,7 +69,20 @@ child.js
 
 ```
 yarn eject
+yarn add less less-loader
+yarn add babel-plugin-import -dev
 ```
+按需加载插件，babel-plugin-import，作用是不加载整个antd，而是加载需要的组件
+
+如果要按照教程就得降级less,`yarn add less@2.7.3`
+
+如果是4.x的webpack解决办法参考：
+
+https://blog.csdn.net/qq_37860930/article/details/85162024
+
+http://www.cnblogs.com/wuqun/p/10131483.html
+
+
 2. 项目主页结构开发
 3. 菜单组件开发
 4. 头部组件开发
