@@ -82,6 +82,46 @@ https://blog.csdn.net/qq_37860930/article/details/85162024
 
 http://www.cnblogs.com/wuqun/p/10131483.html
 
+antd官网参照：      
+https://ant.design/docs/react/use-with-create-react-app-cn#安装和初始化     
+
+```
+yarn add antd --save
+yarn add  react-app-rewired --save
+yarn add babel-plugin-import --save
+yarn add react-app-rewire-less --save
+```
+
+修改package.json    
+```
+"scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
+  },
+```
+
+根目录添加config-overrides.js   
+```
+const {
+    injectBabelPlugin
+} = require('react-app-rewired');
+const rewireLess = require('react-app-rewire-less');
+
+
+module.exports = function override(config, env) {
+    config = injectBabelPlugin(
+        ['import', { libraryName: 'antd', libraryDirectory: 'es', style: true }], // change importing css to less
+        config,
+    );
+    config = rewireLess.withLoaderOptions({
+        modifyVars: { "@primary-color": "#1890ff" },
+        javascriptEnabled: true,
+    })(config, env);
+    return config;
+};
+```
 
 2. 项目主页结构开发
 3. 菜单组件开发
