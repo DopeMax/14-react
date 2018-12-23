@@ -56,11 +56,13 @@ class Square extends React.Component {
             <button onClick={this.handleAdd}>点击一下</button>
             <button onClick={this.handleClick.bind(this)}>点击一下</button>
             <p>{this.state.count}</p>
+            <Child name={this.state.count}></Child>
         </div>
 
     }
 }
 ```
+child.js
 
 ## 4 项目主页工程搭建
 1. 基础插件安装，less文件加载配置
