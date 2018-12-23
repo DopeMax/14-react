@@ -40,7 +40,7 @@ yarn add less@^2.7.3  babel-plugin-import jsonp --dev
 
 this传递的
 ```
-class Square extends React.Component {
+export default class Lift extends React.Component {
     handleAdd=()=>{
         //这里this是当前组件实例
         this.setState({count:this.state.count+1})
@@ -66,6 +66,10 @@ child.js
 
 ## 4 项目主页工程搭建
 1. 基础插件安装，less文件加载配置
+
+```
+yarn eject
+```
 2. 项目主页结构开发
 3. 菜单组件开发
 4. 头部组件开发
